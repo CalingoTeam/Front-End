@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f9f5e9, #d9c37a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    width: 700px;
+    height: 400px;
+    background: #fdf8e9;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .register-mode .left-panel {
+    transform: translateX(100%);
+  }
+  .register-mode .right-panel {
+    transform: translateX(-100%);
+  }
+  
+  .left-panel, .right-panel {
+    width: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .left-panel {
+    background-color: #e6d494;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .iguana {
+    width: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    width: 100px;
+    z-index: 2;
+    
+  }
+  .bola {
+    width: 100px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .toggle-btn {
+    background-color: #fdf8e9;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cactus-group {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+  }
+  
+  .cactus-group img {
+    height: 60px;
+    margin-right: 5px;
+  }
+  
+  .right-panel {
+    background-color: #fdf8e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input, select {
+    margin: 8px 0;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fdf8e9;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white
+  }
+  
+  .socials img {
+    width: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .bola{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
