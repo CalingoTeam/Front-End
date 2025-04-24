@@ -14,7 +14,7 @@ import bola from "../assets/bola.png";
 export default function Login() {
   return (
     <div className="container">
-      <div className="left-panel">
+      <div className="painelEsquerdo">
         <div className="left-content">
           <img src={iguana} alt="Iguana" className="iguana" />
           <img src={bola} alt="bola" className="bola" />
