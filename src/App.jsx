@@ -1,69 +1,42 @@
+// App.jsx
 import React, { useState } from "react";
+import "./index.css";
 import "./components/Login.css";
+import "./components/Cadastro.css";
 import iguana from "./assets/iguana.png";
 import bola from "./assets/bola.png";
-import Cactu1 from "./assets/Cactu1.png";
-import Cactu2 from "./assets/Cactu2.png";
-import Cactu3 from "./assets/Cactu3.png";
-import Cactu4 from "./assets/Cactu4.png";
-import googleIcon from "./assets/google.svg";
-import facebookIcon from "./assets/facebook.svg";
+import cacto1 from "./assets/Cactu1.png";
+import cacto2 from "./assets/Cactu2.png";
+import cacto3 from "./assets/Cactu3.png";
+import cacto4 from "./assets/Cactu4.png";
+import cacto5 from "./assets/Cactu5.png";
+import Login from "./components/Login";
+import Cadastro from "./components/Cadastro";
 
 function App() {
-  const [isRegistering, setIsRegistering] = useState(false);
+  const [cadastrando, setCadastrando] = useState(false);
 
   return (
-    <div className={`container ${isRegistering ? "register-mode" : ""}`}>
-      <section className="left-panel">
+    <div className={`container ${cadastrando ? "modo-cadastro" : ""}`}>
+      <section className="painel-esquerdo">
         <img src={iguana} alt="Iguana" className="iguana" />
         <img src={bola} alt="Bola" className="bola" />
 
-        {!isRegistering ? (
-          <button className="toggle-btn" onClick={() => setIsRegistering(true)}>
-            Cadastre-se aqui
-          </button>
-        ) : (
-          <button className="toggle-btn" onClick={() => setIsRegistering(false)}>
-            Entrar
-          </button>
-        )}
-        <div className="cactus-group">
-          <img src={Cactu1} alt="Cactus 1" />
-          <img src={Cactu2} alt="Cactus 2" />
-          <img src={Cactu3} alt="Cactus 3" />
-          <img src={Cactu4} alt="Cactus 4" />
+        <button className="botao-alternar" onClick={() => setCadastrando(!cadastrando)}>
+          {cadastrando ? "Entrar" : "Cadastre-se aqui"}
+        </button>
+
+        <div className="grupo-cactos">
+          <img src={cacto1} alt="Cacto 1" className="cacto1" />
+          <img src={cacto2} alt="Cacto 2" className="cacto2" />
+          <img src={cacto3} alt="Cacto 3" className="cacto3" />
+          <img src={cacto4} alt="Cacto 4" className="cacto4" />
+          <img src={cacto5} alt="Cacto 5" className="cacto5" />
         </div>
       </section>
 
-      <section className="right-panel">
-        {!isRegistering ? (
-          <div className="login-form">
-            <h2>Entrar</h2>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Senha" />
-            <button>Entrar</button>
-            <div className="socials">
-              <img src={googleIcon} alt="Google" />
-              <img src={facebookIcon} alt="Facebook" />
-            </div>
-          </div>
-        ) : (
-          <div className="register-form">
-            <h2>Cadastro</h2>
-            <input type="text" placeholder="Apelido" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Senha" />
-            <div className="dropdowns">
-              <select><option>Cidade</option></select>
-              <select><option>Estado</option></select>
-            </div>
-            <button>Cadastrar</button>
-            <div className="socials">
-              <img src={googleIcon} alt="Google" />
-              <img src={facebookIcon} alt="Facebook" />
-            </div>
-          </div>
-        )}
+      <section className="painel-direito">
+        {cadastrando ? <Cadastro /> : <Login />}
       </section>
     </div>
   );
