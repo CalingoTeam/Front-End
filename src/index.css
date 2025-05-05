@@ -25,7 +25,8 @@ button {
   font-weight: bold;
   font-size: 20px;
 }
-/* Responsividade */
+
+/* Responsividade 
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -50,4 +51,4 @@ button {
   button {
     font-size: 16px;
   }
-}
+} */
