@@ -30,6 +30,7 @@
   width: 120px;
   position: relative;
   z-index: 2;
+  margin-bottom: 20px;
 }
 
 .bola {
@@ -82,3 +83,119 @@
   width: 25px;
   margin: 10px;
 }
+.btn-entrar{
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 5px 70px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-wrapper input {
+  width: 230px;
+  padding: 10px 40px 10px 10px; /* espaço para o ícone à direita */
+  border-radius: 5px;
+  border: 1px solid #4c4c4c;
+}
+
+.input-wrapper .user {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* alinhamento à direita */
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.user{
+  margin-right: 10px;
+}
+.input-wrapper .lock {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* alinhamento à direita */
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.lock{
+  margin-right: 10px;
+}
+.sociais{
+  margin-left: 110px;
+  cursor: pointer;
+}
+/*
+ Responsividade 
+@media (max-width: 768px) {
+  .container {
+    
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    /*margin-left: -50px;*/
+/*
+  .painel-esquerdo,
+  .painel-direito {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .botao-cadastro,
+  .btn-entrar {
+    align-self: center;
+  }
+
+  .grupo-cactos {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: -30px;
+  }
+
+  .cacto5 {
+    position: absolute;
+    margin-top: 10px;
+  }
+  .botao-alternar{
+    margin-top: 50px;
+  }
+  .iguana{
+    margin-top: 40px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .iguana {
+    width: 90px;
+    margin-bottom: 15px;
+    margin-top: 20px
+  }
+
+  .bola {
+    width: 90px;
+    height: 85px;
+    top: 50px;
+  }
+  .input-wrapper input {
+    font-size: 14px;
+  }
+
+  .botao-cadastro,
+  .btn-entrar {
+    font-size: 16px;
+    padding: 8px 20px;
+    margin-left: 100px;
+  }
+}
+

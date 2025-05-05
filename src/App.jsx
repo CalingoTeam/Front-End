@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState } from "react";
 import "./index.css";
 import "./components/Login.css";
@@ -12,6 +11,7 @@ import cacto4 from "./assets/Cactu4.png";
 import cacto5 from "./assets/Cactu5.png";
 import Login from "./components/Login";
 import Cadastro from "./components/Cadastro";
+
 
 function App() {
   const [cadastrando, setCadastrando] = useState(false);
