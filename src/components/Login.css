@@ -132,23 +132,13 @@
   margin-left: 110px;
   cursor: pointer;
 }
-
-
-
-
-
-
-/*
- Responsividade 
 @media (max-width: 768px) {
   .container {
-    
     flex-direction: column;
+    width: 95%;
     height: auto;
-    align-items: center;
-    justify-content: center;
-    /*margin-left: -50px;*/
-/*
+  }
+
   .painel-esquerdo,
   .painel-direito {
     width: 100%;
@@ -158,50 +148,82 @@
 
   .botao-cadastro,
   .btn-entrar {
-    align-self: center;
+    margin: 20px auto 0;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-left: 70px;
   }
-
+  .iguana{
+    margin-top: 50px;
+    margin-bottom: -0px;
+  }
   .grupo-cactos {
     position: static;
-    margin-top: 20px;
     justify-content: center;
-    margin-bottom: -30px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    margin-right: -10px;
   }
 
   .cacto5 {
     position: absolute;
+    margin-left: -5px;
+  }
+
+  .sociais {
+    margin: 10px auto;
+    justify-content: center;
+    margin-top: 20px;
+    
+  }
+
+  .input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-wrapper input {
+    width: 80%;
+  }
+
+  .icone {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 20px;
     margin-top: 10px;
   }
-  .botao-alternar{
-    margin-top: 50px;
-  }
-  .iguana{
-    margin-top: 40px;
-  }
-  
 }
 
 @media (max-width: 480px) {
-  .iguana {
-    width: 90px;
-    margin-bottom: 15px;
-    margin-top: 20px
+  .container {
+    width: 100%;
+    padding: 10px;
   }
 
-  .bola {
-    width: 90px;
-    height: 85px;
-    top: 50px;
-  }
   .input-wrapper input {
+    width: 90%;
     font-size: 14px;
   }
 
   .botao-cadastro,
   .btn-entrar {
-    font-size: 16px;
-    padding: 8px 20px;
-    margin-left: 100px;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: auto 100px 10px;
+  }
+ 
+
+  .sociais img {
+    width: 20px;
+    margin: 5px;
+    margin-left: -20px;
+  }
+  .cacto5{
+    position: absolute;
+    margin-left: 20px;
+
   }
 }
-

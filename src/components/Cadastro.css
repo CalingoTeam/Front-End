@@ -83,3 +83,112 @@ margin-left: 75px;
 margin-top: 15px;
 }
 
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+    }
+  
+    .painel-esquerdo,
+    .painel-direito {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      transform: none !important; /* remove efeitos de transição que deslocam o painel */
+    }
+    .grupo 
+    .cacto1{
+      width: 60px;
+      height: 60px;
+      
+    }
+    .cacto2{
+      width: 85px;
+      height: 85px;
+
+    }
+    .cacto3{
+      width: 70px;
+      height: 70px;
+    }
+    .cacto4{
+      position: relative;
+      width: 40px;
+      height: 40px;
+    }
+    .cacto5{
+      position: absolute; 
+      height: 30px; 
+      width: 30px;
+      margin-left: -30px;
+    }
+    input, select{
+      width: 60%;
+    }
+  
+    .botao-alternar {
+      margin: 20px auto 0;
+      font-size: 16px;
+    }
+  
+    .sociais {
+      margin: auto;
+      justify-content: center;
+      
+      margin-top: 20px;
+    }
+  
+    .sociais img {
+      width: 22px;
+      margin: 0 8px;
+    }
+  
+    .caixas-selecao {
+      flex-direction: row;
+      align-items: center;
+      margin: 10px auto;
+      gap: 10px;
+    }
+  
+    .btn-cadastrar {
+      margin: 20px 50px;
+      padding: 10px 30px;
+    }
+  
+    h2 {
+      font-size: 22px;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    .btn-cadastrar {
+      font-size: 14px;
+      padding: 8px 20px;
+      margin-left: 60px;
+    }
+  
+    .botao-alternar {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  
+    .sociais img {
+      width: 20px;
+    }
+    .cactu5{
+      margin-left: -20px;
+    }
+    
+  }
+  
