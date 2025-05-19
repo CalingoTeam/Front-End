@@ -1,0 +1,207 @@
+/* src/components/TelaInicial.css */
+
+.tela-inicial {
+  font-family: Arial, sans-serif;
+  background-color: #f9f7f2;
+  color: #333;
+  min-height: 100vh;
+  
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #ccc;
+  
+}
+
+.logo {
+  height: 40px;
+}
+
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: solid 1px;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  max-width: 55%;
+}
+
+.busca input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  margin-bottom: -7px;
+  
+}
+
+.lupa{
+  width: 16px;
+  margin-left: 300px;
+  margin-top: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.fogo-Icon{
+  width: 15px;
+  height: 15px;
+  padding-right: 30px;
+
+}
+.buscarConversa-Icon{
+  width: 15px;
+  height: 15px;
+  padding-right: 30px;
+}
+
+.perfil-icon {
+  width: 15px;
+  height: 15px;
+  padding-right: 30px;
+}
+ .titulo-card span {
+  color: #fff;
+  font-weight: bold;
+}
+.expressao-do-dia{
+  border-radius:20px;
+}
+.titulo-card {
+  background-color: #e6d494;
+  height: 8rem;
+  margin-top: -20px;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding-top: 7rem;
+  border-radius: 1rem;
+}
+
+.titulo-card h2{
+  margin-top: -1rem;
+}
+
+.card-expressao {
+  background-color: #f5e8b4;
+  padding: 2rem;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+  height: 30rem;
+  margin-top: 9rem;
+  margin-left: 30rem;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.significado h3 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+    margin-top: 3rem;
+}
+
+.significado p {
+  font-size: 1.4rem;
+  width: 90%;
+  margin-left: 3rem;
+}
+
+.expressoes-em-alta {
+  
+  background: #f5e8b4;
+  padding: 8rem;
+  margin-top: 12rem;
+}
+
+.expressoes-em-alta h2{
+  margin-top: 2rem;
+}
+
+.grade-expressoes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
+.cactoGroup{
+    width: 7rem;
+    margin-left: -63rem;
+    margin-bottom: -18rem;
+}
+
+.expressao {
+  /*background-color: #f5e8b4;*/
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.expressao h3 {
+  margin-top: 0;
+  padding-bottom: 1rem;
+  color: #000;
+}
+
+.exemplo {
+  font-style: italic;
+  color: #444;
+  padding-bottom: 1rem;
+}
+
+.reacoes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.reacoes img {
+  width: 16px;
+  vertical-align: middle;
+}
+.iguana-telaInicial{
+  width: 39px;
+  position: absolute;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+  max-width: 300px;
+}
+
+.coluna-esquerda {
+  border-right: 2px solid black; /* Traço preto */
+  padding-right: 2rem;
+}
+
+.coluna-direita {
+  padding-left: 2rem;
+}
+
+.dislike{
+  border-left: solid 0.5px;
+  padding-left: 1rem;
+}
+
+a{
+  text-decoration: none;
+}

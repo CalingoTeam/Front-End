@@ -1,0 +1,185 @@
+
+/* Login.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* REMOVER background aqui */
+}
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, #f9f5e9, #d9c37a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+
+.painel-direito {
+  background-color: #fdf8e9;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-cadastro {
+  margin-left: 75px;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.caixa-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icone {
+  margin-left: -30px;
+}
+
+.icones-sociais img {
+  width: 25px;
+  margin: 10px;
+}
+.btn-entrar{
+  margin-left: 45px;
+  margin-top: 20px;
+  padding: 5px 70px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-wrapper input {
+  width: 230px;
+  padding: 10px 40px 10px 10px; /* espaço para o ícone à direita */
+  border-radius: 5px;
+  border: 1px solid #4c4c4c;
+}
+
+.input-wrapper .user {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* alinhamento à direita */
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.user{
+  margin-right: 10px;
+}
+.input-wrapper .lock {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* alinhamento à direita */
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.lock{
+  margin-right: 10px;
+}
+.sociais{
+  margin-left: 110px;
+  
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin-left: 5px;
+  }
+
+  .painel-esquerdo,
+  .painel-direito {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .botao-cadastro,
+  .btn-entrar {
+    margin: 20px auto 0;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-left: 70px;
+  }
+  .iguana{
+    margin-top: 50px;
+    margin-bottom: -0px;
+  }
+  .grupo-cactos {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    margin-right: -10px;
+  }
+  .sociais {
+    margin: 10px auto;
+    justify-content: center;
+    margin-top: 20px;
+    
+  }
+
+  .input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-wrapper input {
+    width: 80%;
+  }
+
+  .icone {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    
+  }
+
+  .input-wrapper input {
+    width: 60%;
+    font-size: 14px;
+  }
+
+  .botao-cadastro,
+  .btn-entrar {
+    font-size: 16px;
+  }
+
+  .sociais img {
+    width: 20px;
+    margin: 5px;
+    margin-left: -20px;
+  }
+  
+}

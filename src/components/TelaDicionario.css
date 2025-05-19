@@ -1,0 +1,85 @@
+@import url("./TelaInicial.css");
+
+.tela-dicionario {
+  background-color: #f9f7f2;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.lista-expressoes {
+  margin-top: 4rem;
+  margin-left: 10rem;
+}
+
+.lista-expressoes h2 {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    /*color: rgb(51, 51, 51);*/
+    border-bottom: solid 1px;
+    margin-left: 5rem;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 0 5rem;
+  height: 40rem;
+  width: 85%;
+}
+
+.card-exp {
+  background-color: #e6d494;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.topo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-exp h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.icon-bookmark {
+  width: 18px;
+}
+
+.card-exp .desc {
+  margin: 2rem 0;
+  font-weight: 500;
+}
+.card-exp p{
+  font-size: 1.2rem;
+}
+
+.card-exp .exemplo {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.reacoes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.reacoes img {
+  width: 16px;
+  vertical-align: middle;
+}
+
+.dislike {
+  border-left: solid 0.5px;
+  padding-left: 1rem;
+}

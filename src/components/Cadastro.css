@@ -1,0 +1,155 @@
+
+/* Cadastro.css */
+
+.container {
+  transition: transform 0.6s ease-in-out;
+}
+
+.modo-cadastro .painel-esquerdo {
+  transform: translateX(100%);
+}
+
+.modo-cadastro .painel-direito {
+  transform: translateX(-100%);
+}
+
+.painel-esquerdo, .painel-direito {
+  width: 50%;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: transform 0.6s ease-in-out;
+}
+
+.painel-esquerdo {
+  overflow: hidden;
+}
+
+.painel-direito {
+  background-color: #fdf8e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sociais img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.caixas-selecao {
+  display: flex;
+  gap: 25px;
+  width: 200px;
+  margin-left: 40px;
+}
+
+.btn-cadastrar{
+  padding: 5px 20px;
+  margin-left: 75px;
+  margin-top: 15px;
+}
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+    }
+  
+    .painel-esquerdo,
+    .painel-direito {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      transform: none !important;
+    }
+    
+    .cacto1{
+      width: 65px;
+      height: 60px;
+      
+    }
+    .cacto2{
+      width: 85px;
+      height: 85px;
+
+    }
+    .cacto3{
+      width: 65px;
+      height: 70px;
+    }
+    .cacto4{
+      position: relative;
+      width: 45px;
+      height: 40px;
+      padding-right: 9px;
+    }
+    .cacto5{
+      position: absolute;
+      height: 25px;
+      width: 30px;
+      margin-left: -55px;
+    }
+    input, select{
+      width: 60%;
+    }
+  
+    .botao-alternar {
+      margin: 20px auto 0;
+      font-size: 16px;
+    }
+  
+    .sociais {
+      margin: auto;
+      justify-content: center;
+      
+      margin-top: 20px;
+    }
+  
+    .sociais img {
+      width: 22px;
+      margin: 0 8px;
+    }
+  
+    .caixas-selecao {
+      flex-direction: row;
+      align-items: center;
+      margin: 10px auto;
+      gap: 10px;
+    }
+  
+    .btn-cadastrar {
+      margin: 20px 50px;
+      padding: 10px 30px;
+    }
+  
+    h2 {
+      font-size: 22px;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .user{
+      margin-right: 20px;
+    }
+    .lock{
+      margin-right: 20px;
+    }
+    .cacto5{
+      width: 30px;
+      margin-left: -30px;
+      
+    }
+    .grupo-cactos img {
+      margin-right: 3px;
+    }
+    
+  }
+  

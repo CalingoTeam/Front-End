@@ -1,0 +1,94 @@
+
+/* index.css */
+html{
+  font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f7f2;
+}
+
+.container {
+  display: flex;
+  width: 700px;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.painel-esquerdo .painel-direito{
+  width: 50%;
+}
+.painel-esquerdo{
+  background-color: #e6d494;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.iguana {
+  width: 120px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+.bola {
+  position: absolute;
+  width: 125px;
+  height: 120px;
+  border-radius: 50%;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+input, select {
+  margin: 0.5rem;
+  padding: 0.8rem;
+  width: 90%;
+  border-radius: 0.5rem;
+}
+
+button {
+  background-color: #fdf8e9;
+  border: 0.1rem solid #4c4c4c;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.botao-alternar {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 6px 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 90px;
+  margin-left: -5px;
+  color: white;
+  font-size: 20px;
+}
+.cacto1 { height: 100px; width: 75px; }
+.cacto2 { height: 140px; width: 90px; }
+.cacto3 { height: 105px; width: 95px; }
+.cacto4 { height: 55px; padding-left: 10px; position: relative; z-index: 1; }
+.cacto5 { height: 30px; position: absolute; left: 310px; bottom: 0; z-index: 2; width: 40px; }
+
+.grupo-cactos {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.sociais {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 105px;
+  margin-bottom: 40px;
+  cursor: pointer;
+} 
