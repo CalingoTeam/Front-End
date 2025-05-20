@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./TelaInicial.css";
+import Header from "./Header";
 import logo from "../assets/Logo.png";
 import lupa from "../assets/lupa.svg";
 import userIcon from "../assets/User.svg";
@@ -55,30 +56,7 @@ function TelaInicial() {
 
   return (
     <div className="tela-inicial">
-      <header className="cabecalho">
-        <img src={iguana} alt="Logo" className="iguana-telaInicial" />
-        <img src={logo} alt="Logo" className="logo" />
-
-        {/* 🔍 Campo de busca com redirecionamento */}
-        <form className="busca" onSubmit={handleSubmit}>
-          <img src={lupa} alt="Buscar" className="lupa" />
-          <input
-            type="text"
-            placeholder="Pesquise uma expressão..."
-            value={busca}
-            onChange={(e) => setBusca(e.target.value)}
-          />
-        </form>
-
-        <nav className="menu">
-          <a href="#">Desafio</a>
-          <img src={fogoIcon} alt="buscar" className="fogo-Icon" />
-          <Link to="/dicionario">Dicionário</Link>
-          <img src={buscarConversaIcon} alt="buscar" className="buscarConversa-Icon" />
-          <a href="#">Perfil</a>
-          <img src={userIcon} alt="Perfil" className="perfil-icon" />
-        </nav>
-      </header>
+      <Header />
 
       <main className="conteudo">
         <section className="expressao-do-dia">

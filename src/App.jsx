@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import TelaPerfil from "./components/TelaPerfil";
 import "./index.css";
 import "./components/Login.css";
 import "./components/Cadastro.css";
@@ -62,6 +63,8 @@ function App() {
         <Route path="/" element={<TelaInicial />} />
         <Route path="/significado/:titulo" element={<TelaSignificado />} />
         <Route path="/dicionario" element={<TelaDicionario />} /> {/* ✅ Rota adicionada */}
+        <Route path="/perfil" element={<TelaPerfil />} /> {/* ✅ Rota de Perfil */}
+
       </Routes>
     </Router>
   );

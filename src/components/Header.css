@@ -1,0 +1,60 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  height: 40px;
+}
+
+.iguana-telaInicial {
+  width: 39px;
+  position: absolute;
+}
+
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: solid 1px;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  max-width: 55%;
+}
+
+.busca input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  margin-bottom: -7px;
+}
+
+.lupa {
+  width: 16px;
+  margin-left: 300px;
+  margin-top: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.fogo-Icon,
+.buscarConversa-Icon,
+.perfil-icon {
+  width: 15px;
+  height: 15px;
+  padding-right: 30px;
+}

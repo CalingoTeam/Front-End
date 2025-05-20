@@ -2,6 +2,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "./Header"
 import "./TelaSignificado.css";
 import logo from "../assets/Logo.png";
 import iguana from "../assets/iguana.png";
@@ -80,22 +81,7 @@ function TelaSignificado() {
 
   return (
     <div className="tela-significado">
-      <header className="cabecalho">
-        <img src={iguana} alt="Logo" className="iguana-telaInicial" />
-        <img src={logo} alt="Logo" className="logo" />
-        <div className="busca">
-          <img src={lupa} alt="Buscar" className="lupa" />
-          <input type="text" placeholder="Pesquise uma expressão..." />
-        </div>
-        <nav className="menu">
-          <a href="#">Desafio</a>
-          <img src={fogoIcon} alt="buscar" className="fogo-Icon" />
-          <Link to="/dicionario">Dicionário</Link>
-          <img src={buscarConversaIcon} alt="buscar" className="buscarConversa-Icon" />
-          <a href="#">Perfil</a>
-          <img src={userIcon} alt="Perfil" className="perfil-icon" />
-        </nav>
-      </header>
+      <Header />
 
       <main>
         <div className="expressao-box">

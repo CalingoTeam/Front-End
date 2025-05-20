@@ -8,19 +8,19 @@
 
 .lista-expressoes {
   margin-top: 4rem;
-  margin-left: 10rem;
+  margin-left: 8rem;
 }
 
 .lista-expressoes h2 {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    width: fit-content;
-    /*color: rgb(51, 51, 51);*/
-    border-bottom: solid 1px;
-    margin-left: 5rem;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  border-bottom: solid 1px;
+  margin-left: 5rem;
+  cursor: pointer;
 }
 
 .grid-cards {
@@ -36,7 +36,7 @@
   background-color: #e6d494;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .topo-card {
@@ -52,13 +52,15 @@
 
 .icon-bookmark {
   width: 18px;
+  cursor: pointer;
 }
 
 .card-exp .desc {
   margin: 2rem 0;
   font-weight: 500;
 }
-.card-exp p{
+
+.card-exp p {
   font-size: 1.2rem;
 }
 
@@ -68,18 +70,26 @@
   margin-bottom: 2rem;
 }
 
-.reacoes {
+.reacoes-telaDicionario {
   display: flex;
+  align-items: center;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.reacoes img {
-  width: 16px;
-  vertical-align: middle;
+.reacoes-telaDicionario span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.dislike {
-  border-left: solid 0.5px;
-  padding-left: 1rem;
+.reacoes-telaDicionario .divisor {
+  height: 1.5rem;
+  width: 1px;
+  background-color: black;
+}
+
+.reacoes-telaDicionario img {
+  width: 16px;
+  vertical-align: middle;
 }

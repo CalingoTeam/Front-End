@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 import "./TelaDicionario.css";
 import logo from "../assets/Logo.png";
 import lupa from "../assets/lupa.svg";
@@ -10,10 +11,12 @@ import iguana from "../assets/iguana.png";
 import bookmark from "../assets/bookmark.svg";
 import likeIcon from "../assets/like.svg";
 import dislikeIcon from "../assets/dislike.svg";
-import ordenacaoIcon from "../assets/ordenacao.svg"
+import ordenacaoIcon from "../assets/ordenacao.svg";
 
 function TelaDicionario() {
-  const expressoes = [
+  const [ordemAscendente, setOrdemAscendente] = useState(true);
+
+  const [expressoes, setExpressoes] = useState([
     {
       titulo: "Abestalhado",
       desc: "Bobo, sem noção",
@@ -24,7 +27,7 @@ function TelaDicionario() {
     {
       titulo: "Arengar",
       desc: "Discutir, brigar",
-      exemplo: "Pára de arengar e resolve logo isso!",
+      exemplo: "Pare de arengar e resolve logo isso!",
       likes: 53,
       dislikes: 8,
     },
@@ -56,31 +59,28 @@ function TelaDicionario() {
       likes: 78,
       dislikes: 43,
     },
-  ];
+  ]);
+
+  const ordenarExpressoes = () => {
+    const ordenado = [...expressoes].sort((a, b) => {
+      return ordemAscendente
+        ? a.titulo.localeCompare(b.titulo)
+        : b.titulo.localeCompare(a.titulo);
+    });
+    setExpressoes(ordenado);
+    setOrdemAscendente(!ordemAscendente);
+  };
 
   return (
     <div className="tela-dicionario">
-      <header className="cabecalho">
-        <img src={iguana} alt="Logo" className="iguana-telaInicial" />
-        <img src={logo} alt="Logo" className="logo" />
-
-        <form className="busca">
-          <img src={lupa} alt="Buscar" className="lupa" />
-          <input type="text" placeholder="Pesquise uma expressão..." />
-        </form>
-
-        <nav className="menu">
-          <a href="#">Desafio</a>
-          <img src={fogoIcon} alt="buscar" className="fogo-Icon" />
-          <a href="#">Dicionário</a>
-          <img src={buscarConversaIcon} alt="buscar" className="buscarConversa-Icon" />
-          <a href="#">Perfil</a>
-          <img src={userIcon} alt="Perfil" className="perfil-icon" />
-        </nav>
-      </header>
+      <Header />
 
       <main className="lista-expressoes">
-        <h2> <img src={ordenacaoIcon} alt="Logo" className="ordenacaoIcon" />Ordem alfabética</h2>
+        <h2 onClick={ordenarExpressoes}>
+          <img src={ordenacaoIcon} alt="Ordenar" className="ordenacaoIcon" />
+          Ordem alfabética
+        </h2>
+
         <div className="grid-cards">
           {expressoes.map((exp, index) => (
             <div className="card-exp" key={index}>
@@ -90,12 +90,13 @@ function TelaDicionario() {
               </div>
               <p className="desc">{exp.desc}</p>
               <p className="exemplo">"{exp.exemplo}"</p>
-              <div className="reacoes">
+              <div className="reacoes-telaDicionario">
                 <span>
-                  <img src={likeIcon} alt="Curtir" /> {exp.likes}
+                  {exp.likes} <img src={likeIcon} alt="Curtir" />
                 </span>
+                <span className="divisor" />
                 <span>
-                  <img src={dislikeIcon} alt="Não curtir" className="dislike" /> {exp.dislikes}
+                  {exp.dislikes} <img src={dislikeIcon} alt="Não curtir" />
                 </span>
               </div>
             </div>
