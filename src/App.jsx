@@ -60,8 +60,8 @@ function App() {
       <Routes>
         <Route path="/" element={<TelaInicial />} />
         <Route path="/significado/:titulo" element={<TelaSignificado />} />
-        <Route path="/dicionario" element={<TelaDicionario />} /> {/* ✅ Rota adicionada */}
-        <Route path="/perfil" element={<TelaPerfil />} /> {/* ✅ Rota de Perfil */}
+        <Route path="/dicionario" element={<TelaDicionario />} /> {/* Rota adicionada */}
+        <Route path="/perfil" element={<TelaPerfil />} /> 
 
       </Routes>
     </Router>
