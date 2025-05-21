@@ -41,7 +41,7 @@ function Header() {
         <Link to="/dicionario">Dicionário</Link>
         <img src={buscarConversaIcon} alt="Buscar" className="buscarConversa-Icon" />
 
-        <Link to="/perfil">Perfil</Link> {/* <- Atualizado aqui */}
+        <Link to="/perfil">Perfil</Link> {}
         <img src={userIcon} alt="Perfil" className="perfil-icon" />
       </nav>
     </header>

@@ -6,8 +6,7 @@ import "./components/Login.css";
 import "./components/Cadastro.css";
 import "./components/TelaInicial.css";
 import "./components/TelaSignificado.css";
-import "./components/TelaDicionario.css"; // Adicionado caso tenha o CSS da tela
-
+import "./components/TelaDicionario.css"; 
 import iguana from "./assets/iguana.png";
 import bola from "./assets/bola.png";
 import cacto1 from "./assets/Cactu1.png";
@@ -15,12 +14,11 @@ import cacto2 from "./assets/Cactu2.png";
 import cacto3 from "./assets/Cactu3.png";
 import cacto4 from "./assets/Cactu4.png";
 import cacto5 from "./assets/Cactu5.png";
-
 import Login from "./components/Login";
 import Cadastro from "./components/Cadastro";
 import TelaInicial from "./components/TelaInicial";
 import TelaSignificado from "./components/TelaSignificado";
-import TelaDicionario from "./components/TelaDicionario"; // ✅ Importação adicionada
+import TelaDicionario from "./components/TelaDicionario"; 
 
 function App() {
   const [cadastrando, setCadastrando] = useState(false);
