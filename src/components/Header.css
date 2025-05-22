@@ -7,11 +7,11 @@
 }
 
 .logo {
-  height: 40px;
+  height: 4rem;
 }
 
 .iguana-telaInicial {
-  width: 39px;
+  width: 3.9rem;
   position: absolute;
 }
 
@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border-bottom: solid 1px;
+  border-bottom: solid 0.1rem;
   padding: 0.5rem 1rem;
   flex: 1;
   max-width: 55%;
@@ -30,13 +30,13 @@
   outline: none;
   width: 100%;
   background: transparent;
-  margin-bottom: -7px;
+  margin-bottom: -0.7rem;
 }
 
 .lupa {
-  width: 16px;
-  margin-left: 300px;
-  margin-top: 10px;
+  width: 1.6rem;
+  margin-left: 30rem;
+  margin-top: 1rem;
 }
 
 .menu {
@@ -48,13 +48,13 @@
 .menu a {
   text-decoration: none;
   color: #333;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 .fogo-Icon,
 .buscarConversa-Icon,
 .perfil-icon {
-  width: 15px;
-  height: 15px;
-  padding-right: 30px;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-right: 3rem;
 }

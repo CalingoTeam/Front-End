@@ -1,9 +1,7 @@
-
-/* Login.css */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  /* REMOVER background aqui */
+
 }
 .login-wrapper {
   height: 100vh;

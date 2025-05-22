@@ -37,9 +37,9 @@
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
 }
 
 .input-group-telaPerfil {
@@ -48,7 +48,7 @@
 }
 
 .input-group-telaPerfil label {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-bottom: -3rem;
   margin-left: 24rem;
   display: flex;
@@ -60,11 +60,11 @@
 .input-group-telaPerfil input {
   
   width: 75%;
-  padding: 6px 0;
+  padding: 0.6rem 0;
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 0.1rem solid #000;
   background-color: transparent;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #000;
   outline: none;
   margin-left: 4rem;
@@ -73,18 +73,17 @@
 
 .perfil-conteudo {
   flex: 1;
-  padding: 30px;
+  padding: 3rem;
   background-color: #fff8d8;
   margin-right: 10rem;
 }
 
 .expressao-colunas {
   display: flex;
-  gap: 40px;
-  
+  gap: 4rem;
 }
 .coluna-telaPerfil {
-  /*flex: 1;*/
+  /* flex: 1; */
   margin-left: 9rem;
 
 }
@@ -99,19 +98,19 @@
 }
 
 .coluna h2 {
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin-bottom: 2rem;
+  font-size: 2rem;
   color: #333;
 }
 
 .expressao-card {
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.6rem;
 }
 
 .expressao-card h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #222;
 }
 
@@ -128,12 +127,12 @@
 .interacoes-telaPerfil {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 .interacoes-telaPerfil .divisor {
   height: 1.5rem;
-  width: 1px;
+  width: 0.1rem;
   background-color: black;
 }
 .bookmark-telaPerfil{

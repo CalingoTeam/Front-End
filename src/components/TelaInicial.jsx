@@ -91,13 +91,14 @@ function TelaInicial() {
                       <h3>{exp.titulo}</h3>
                     </Link>
                     <p className="desc">{exp.desc}</p>
-                    <p className="exemplo">"{exp.exemplo}"</p>
-                    <div className="reacoes">
+                    <p className="exemplo-telaInicial">"{exp.exemplo}"</p>
+                    <div className="reacoes-telaInicial">
                       <span>
-                        <img src={likeIcon} alt="Curtir" /> {exp.likes}
+                        {exp.likes}<img src={likeIcon} className="like-telaInicial" alt="Curtir" />
                       </span>
+                      <span className="divisor" />
                       <span>
-                        <img src={dislikeIcon} className="dislike" alt="Não curtir" /> {exp.dislikes}
+                        {exp.dislikes}<img src={dislikeIcon} className="dislike-telaInicial" alt="Não curtir" /> 
                       </span>
                     </div>
                   </div>
@@ -114,13 +115,14 @@ function TelaInicial() {
                       <h3>{exp.titulo}</h3>
                     </Link>
                     <p className="desc">{exp.desc}</p>
-                    <p className="exemplo">"{exp.exemplo}"</p>
-                    <div className="reacoes">
+                    <p className="exemplo-telaInicial">"{exp.exemplo}"</p>
+                    <div className="reacoes-telaInicial">
                       <span>
-                        <img src={likeIcon} alt="Curtir" /> {exp.likes}
+                        {exp.likes}<img src={likeIcon} alt="Curtir" className="like-telaInicial" /> 
                       </span>
+                      <span className="divisor" />
                       <span>
-                        <img src={dislikeIcon} className="dislike" alt="Não curtir" /> {exp.dislikes}
+                        {exp.dislikes}<img src={dislikeIcon} className="dislike-telaInicial" alt="Não curtir" /> 
                       </span>
                     </div>
                   </div>

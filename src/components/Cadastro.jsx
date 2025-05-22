@@ -4,21 +4,44 @@ import iconeGoogle from "../assets/google.svg";
 import iconeFacebook from "../assets/facebook.svg";
 import user from "../assets/User.svg";
 import lock from "../assets/Lock.svg";
+import { useState } from "react";
 
 function Cadastro({ onLogin }) {
+  // Ligação Front e Back
+  const[formData, setFormData] = useState({
+    apelido: '',
+    email: '',
+    senha: '',
+  })
+
+  const handleFormEdit = (event, apelido) => {
+    setFormData({
+      ...FormData,
+      [apelido]: event.target.value
+    })
+  } 
+
+  const handleForm = async(event) => {
+    try{
+      event.preventDefault()
+      const response = await fetch()
+    } catch (err) {
+
+    }
+  }
   return (
     <div className="formulario-cadastro">
       <h2>Cadastro</h2>
       <div className="input-wrapper">
-        <input type="text" placeholder="Apelido" />
+        <input type="text" placeholder="Apelido" required value={formData.apelido} onChange={(e) => {handleFormEdit(e, 'apelido')} }/>
         <img src={user} className="user" alt="User" />
       </div>
       <div className="input-wrapper">
-        <input type="email" placeholder="Email" />
+        <input type="email" placeholder="Email" required value={formData.email}/>
         <img src={user} className="user" alt="User" />
       </div>
       <div className="input-wrapper">
-        <input type="password" placeholder="Senha" />
+        <input type="password" placeholder="Senha" required value={formData.senha}/>
         <img src={lock} className="lock" alt="Lock" />
       </div>
       <div className="caixas-selecao">
