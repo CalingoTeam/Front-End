@@ -35,7 +35,7 @@ function Header() {
       </form>
 
       <nav className="menu">
-        <Link to="#">Desafio</Link>
+        <Link to="/desafio">Desafio</Link>
         <img src={fogoIcon} alt="Desafio" className="fogo-Icon" />
 
         <Link to="/dicionario">Dicionário</Link>
