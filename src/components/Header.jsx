@@ -24,7 +24,7 @@ function Header() {
     <header className="cabecalho">
       <img src={iguana} alt="Iguana" className="iguana-telaInicial" />
 
-      <Link to="TelaInicial">
+      <Link to="/TelaInicial">
         < img src={logo} alt="Logo" className="logo" />
       </Link>
 
