@@ -146,7 +146,7 @@
     margin-bottom: -18rem;
 }
 
-.expressao {
+.expressao-telaInicial {
   /*background-color: #f5e8b4;*/
   border-radius: 10px;
   padding: 1rem;
@@ -204,4 +204,11 @@
 
 a{
   text-decoration: none;
+}
+
+.coluna-esquerda h3{
+  color: #000;
+}
+.coluna-direita h3{
+  color: #000;
 }

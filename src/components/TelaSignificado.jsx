@@ -82,7 +82,7 @@ function TelaSignificado() {
   return (
     <div className="tela-significado">
       <Header />
-
+      
       <main>
         <div className="expressao-box">
           <div className="bloco-titulo">

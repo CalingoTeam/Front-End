@@ -86,7 +86,7 @@ function TelaInicial() {
               {[0, 1].map((i) => {
                 const exp = expressoes[i];
                 return (
-                  <div className="expressao" key={i}>
+                  <div className="expressao-TelaInicial" key={i}>
                     <Link to={`/significado/${exp.titulo}`}>
                       <h3>{exp.titulo}</h3>
                     </Link>
@@ -109,7 +109,7 @@ function TelaInicial() {
               {[2, 3].map((i) => {
                 const exp = expressoes[i];
                 return (
-                  <div className="expressao" key={i}>
+                  <div className="expressao-TelaInicial" key={i}>
                     <Link to={`/significado/${exp.titulo}`}>
                       <h3>{exp.titulo}</h3>
                     </Link>

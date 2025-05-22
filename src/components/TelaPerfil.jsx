@@ -1,8 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TelaPerfil.css';
 import Header from './Header';
 import Button from "./Button";
-import User from '../assets/User.svg';
+
 import pencil from "../assets/pencil.svg";
 import Chapeu from "../assets/Chapeu.png";
 import BolaAmarela from "../assets/BolaAmarela.png";
@@ -12,6 +13,12 @@ import like from '../assets/like.svg';
 import dislike from '../assets/dislike.svg';
 
 const TelaPerfil = () => {
+  const navigate = useNavigate();
+
+  const redirecionarParaSugestao = () => {
+    navigate("/sugestao");
+  };
+
   return (
     <div className="tela-perfil">
       <Header />
@@ -20,27 +27,29 @@ const TelaPerfil = () => {
           <img src={Chapeu} alt="chapeu-cangaceiro" className="chapeu-Cangaceiro" />
           <img src={BolaAmarela} alt="bola amarela" className="bola-amarela" />
           <img src={Caveira} alt="Caveira" className="caveira" />
-          <div className="input-group">
-            <label> <img src={pencil} alt="pencil" className="pencil" /></label>
+
+          <div className="input-group-telaPerfil">
+            <label><img src={pencil} alt="Editar" className="pencil" /></label>
             <input type="text" placeholder="Apelido" />
           </div>
-          <div className="input-group">
-            <label> <img src={pencil} alt="pencil" className="pencil" /></label>
+          <div className="input-group-telaPerfil">
+            <label><img src={pencil} alt="Editar" className="pencil" /></label>
             <input type="email" placeholder="Email" />
           </div>
-          <div className="input-group">
-            <label><img src={pencil} alt="pencil" className="pencil" /></label>
+          <div className="input-group-telaPerfil">
+            <label><img src={pencil} alt="Editar" className="pencil" /></label>
             <input type="password" placeholder="Senha" />
           </div>
-          <div className="input-group">
-            <label><img src={pencil} alt="pencil" className="pencil" /></label>
+          <div className="input-group-telaPerfil">
+            <label><img src={pencil} alt="Editar" className="pencil" /></label>
             <input type="text" placeholder="Cidade" />
           </div>
-          <div className="input-group">
-            <label><img src={pencil} alt="pencil" className="pencil" /></label>
+          <div className="input-group-telaPerfil">
+            <label><img src={pencil} alt="Editar" className="pencil" /></label>
             <input type="text" placeholder="Estado" />
           </div>
-          <Button>Sugerir Expressão</Button>
+
+          <Button onClick={redirecionarParaSugestao}>Sugerir Expressão</Button>
         </div>
 
         <div className="perfil-conteudo">
@@ -54,11 +63,11 @@ const TelaPerfil = () => {
                 <p className="exemplo">- Deixa de me aperrear, visse</p>
                 <div className="interacoes-telaPerfil">
                   <span>68</span>
-                  <img src={like} alt="like" className="like-telaPerfil" />
+                  <img src={like} alt="Curtir" className="like-telaPerfil" />
                   <span className="divisor"></span>
                   <span>14</span>
-                  <img src={dislike} alt="dislike" className="dislike-telaPerfil" />
-                  <img src={bookmark} alt="favorito" className="bookmark-telaPerfil"/>
+                  <img src={dislike} alt="Descurtir" className="dislike-telaPerfil" />
+                  <img src={bookmark} alt="Favorito" className="bookmark-telaPerfil" />
                 </div>
               </div>
 
@@ -68,11 +77,11 @@ const TelaPerfil = () => {
                 <p className="exemplo">- Pra chegar lá, tem que arrudear.</p>
                 <div className="interacoes-telaPerfil">
                   <span>82</span>
-                  <img src={like} alt="like" className="like-telaPerfil"/>
+                  <img src={like} alt="Curtir" className="like-telaPerfil" />
                   <span className="divisor"></span>
                   <span>7</span>
-                  <img src={dislike} alt="dislike" className="dislike-telaPerfil"/>
-                  <img src={bookmark} alt="favorito" className="bookmark-telaPerfil" />
+                  <img src={dislike} alt="Descurtir" className="dislike-telaPerfil" />
+                  <img src={bookmark} alt="Favorito" className="bookmark-telaPerfil" />
                 </div>
               </div>
             </div>
@@ -86,11 +95,11 @@ const TelaPerfil = () => {
                 <p className="exemplo">- Sai da frente, tu só estrova!</p>
                 <div className="interacoes-telaPerfil">
                   <span>49</span>
-                  <img src={like} alt="like" className="like-telaPerfil"/>
+                  <img src={like} alt="Curtir" className="like-telaPerfil" />
                   <span className="divisor"></span>
                   <span>12</span>
-                  <img src={dislike} alt="dislike" className="dislike-telaPerfil"/>
-                  <img src={bookmark} alt="favorito" className="bookmark-telaPerfil" />
+                  <img src={dislike} alt="Descurtir" className="dislike-telaPerfil" />
+                  <img src={bookmark} alt="Favorito" className="bookmark-telaPerfil" />
                 </div>
               </div>
 
@@ -100,12 +109,11 @@ const TelaPerfil = () => {
                 <p className="exemplo">- Tô encangado de coisa pra fazer.</p>
                 <div className="interacoes-telaPerfil">
                   <span>128</span>
-                  <img src={like} alt="like" className="like-telaPerfil"/>
+                  <img src={like} alt="Curtir" className="like-telaPerfil" />
                   <span className="divisor"></span>
                   <span>2</span>
-                  <img src={dislike} alt="dislike" className="dislike-telaPerfil"/>
-                  
-                  <img src={bookmark} alt="favorito" className="bookmark-telaPerfil"/>
+                  <img src={dislike} alt="Descurtir" className="dislike-telaPerfil" />
+                  <img src={bookmark} alt="Favorito" className="bookmark-telaPerfil" />
                 </div>
               </div>
             </div>

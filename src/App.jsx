@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TelaPerfil from "./components/TelaPerfil";
+import TelaSugestao from "./components/TelaSugestao";
 import "./index.css";
 import "./components/Login.css";
 import "./components/Cadastro.css";
 import "./components/TelaInicial.css";
 import "./components/TelaSignificado.css";
-import "./components/TelaDicionario.css"; 
+import "./components/TelaDicionario.css";
 import iguana from "./assets/iguana.png";
 import bola from "./assets/bola.png";
 import cacto1 from "./assets/Cactu1.png";
@@ -18,7 +19,7 @@ import Login from "./components/Login";
 import Cadastro from "./components/Cadastro";
 import TelaInicial from "./components/TelaInicial";
 import TelaSignificado from "./components/TelaSignificado";
-import TelaDicionario from "./components/TelaDicionario"; 
+import TelaDicionario from "./components/TelaDicionario";
 
 function App() {
   const [cadastrando, setCadastrando] = useState(false);
@@ -31,7 +32,10 @@ function App() {
           <section className="painel-esquerdo">
             <img src={iguana} alt="Iguana" className="iguana" />
             <img src={bola} alt="Bola" className="bola" />
-            <button className="botao-alternar" onClick={() => setCadastrando(!cadastrando)}>
+            <button
+              className="botao-alternar"
+              onClick={() => setCadastrando(!cadastrando)}
+            >
               {cadastrando ? "Entrar" : "Cadastre-se aqui"}
             </button>
             <div className="grupo-cactos">
@@ -60,9 +64,9 @@ function App() {
       <Routes>
         <Route path="/" element={<TelaInicial />} />
         <Route path="/significado/:titulo" element={<TelaSignificado />} />
-        <Route path="/dicionario" element={<TelaDicionario />} /> {/* Rota adicionada */}
-        <Route path="/perfil" element={<TelaPerfil />} /> 
-
+        <Route path="/dicionario" element={<TelaDicionario />} />
+        <Route path="/perfil" element={<TelaPerfil />} />
+        <Route path="/sugestao" element={<TelaSugestao />} /> 
       </Routes>
     </Router>
   );
