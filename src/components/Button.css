@@ -2,7 +2,7 @@
   padding: 0.7rem;
   width: 70%;
   background-color: transparent;
-  border: 1px solid;
+  border: 0.1rem solid;
   border-radius: 0.4rem;
   cursor: pointer;
 }

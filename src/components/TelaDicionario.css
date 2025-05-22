@@ -18,7 +18,7 @@
   align-items: center;
   gap: 0.5rem;
   width: fit-content;
-  border-bottom: solid 1px;
+  border-bottom: solid 0.1rem;
   margin-left: 5rem;
   cursor: pointer;
 }
@@ -35,8 +35,8 @@
 .card-exp {
   background-color: #e6d494;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
 }
 
 .topo-card {
@@ -51,7 +51,7 @@
 }
 
 .icon-bookmark {
-  width: 18px;
+  width: 1.8rem;
   cursor: pointer;
 }
 
@@ -85,11 +85,11 @@
 
 .reacoes-telaDicionario .divisor {
   height: 1.5rem;
-  width: 1px;
+  width: 0.1rem;
   background-color: black;
 }
 
 .reacoes-telaDicionario img {
-  width: 16px;
+  width: 1.6rem;
   vertical-align: middle;
 }

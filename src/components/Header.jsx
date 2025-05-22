@@ -6,6 +6,7 @@ import userIcon from "../assets/User.svg";
 import fogoIcon from "../assets/foguinho.svg";
 import buscarConversaIcon from "../assets/buscarConversa.svg";
 import iguana from "../assets/iguana.png";
+import TelaInicial from "./TelaInicial.jsx";
 import "./Header.css";
 
 function Header() {
@@ -22,7 +23,10 @@ function Header() {
   return (
     <header className="cabecalho">
       <img src={iguana} alt="Iguana" className="iguana-telaInicial" />
-      <img src={logo} alt="Logo" className="logo" />
+
+      <Link to="TelaInicial">
+        < img src={logo} alt="Logo" className="logo" />
+      </Link>
 
       <form className="busca" onSubmit={handleSubmit}>
         <img src={lupa} alt="Buscar" className="lupa" />
@@ -35,7 +39,7 @@ function Header() {
       </form>
 
       <nav className="menu">
-        <Link to="#">Desafio</Link>
+        <Link to="#" className="menu-edit" >Desafio</Link>
         <img src={fogoIcon} alt="Desafio" className="fogo-Icon" />
 
         <Link to="/dicionario">Dicionário</Link>
