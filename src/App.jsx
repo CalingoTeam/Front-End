@@ -7,6 +7,7 @@ import "./components/Cadastro.css";
 import "./components/TelaInicial.css";
 import "./components/TelaSignificado.css";
 import "./components/TelaDicionario.css"; 
+import "./components/TelaDesafio.css"; 
 import iguana from "./assets/iguana.png";
 import bola from "./assets/bola.png";
 import cacto1 from "./assets/Cactu1.png";
@@ -19,6 +20,7 @@ import Cadastro from "./components/Cadastro";
 import TelaInicial from "./components/TelaInicial";
 import TelaSignificado from "./components/TelaSignificado";
 import TelaDicionario from "./components/TelaDicionario"; 
+import TelaDesafio from "./components/TelaDesafio";
 
 function App() {
   const [cadastrando, setCadastrando] = useState(false);
@@ -62,7 +64,7 @@ function App() {
         <Route path="/significado/:titulo" element={<TelaSignificado />} />
         <Route path="/dicionario" element={<TelaDicionario />} /> {/* Rota adicionada */}
         <Route path="/perfil" element={<TelaPerfil />} /> 
-
+        <Route path="/desafio" element={<TelaDesafio />} />
       </Routes>
     </Router>
   );
