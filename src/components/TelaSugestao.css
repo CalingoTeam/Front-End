@@ -8,24 +8,26 @@
   justify-content: space-around;
   align-items: flex-start;
   padding: 4rem;
+  gap: 2rem;
+  flex-wrap: wrap; 
 }
 
 .formulario-sugestao {
   background-color: #dbc97c;
-  padding: 6rem;
+  padding: 4rem;
   border-radius: 0.8rem;
   width: 35rem;
-  margin-left: -10rem;
+  min-width: 300px;
 }
-.btn-telaSugestao{
-    margin-left: 5rem;
-    margin-top: 2rem;
+
+.btn-telaSugestao {
+  margin-left: 5rem;
+  margin-top: 2rem;
 }
 
 .formulario-sugestao h2 {
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: -2rem;
   font-size: 2rem;
 }
 
@@ -61,4 +63,49 @@
   border-radius: 6rem;
   font-size: 1.6rem;
   width: 25rem;
+  min-width: 250px;
+  text-align: center;
+}
+
+/* 🔥 Responsividade */
+@media (max-width: 768px) {
+  .container-sugestao {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .formulario-sugestao {
+    width: 90%;
+    margin: 0;
+    padding: 3rem;
+  }
+
+  .btn-telaSugestao {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .expressao {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario-sugestao {
+    padding: 2rem;
+  }
+
+  .formulario-sugestao h2 {
+    font-size: 1.6rem;
+  }
+
+  .input-group input {
+    font-size: 1.2rem;
+  }
+
+  .expressao {
+    font-size: 1.4rem;
+  }
 }

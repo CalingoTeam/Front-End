@@ -69,11 +69,16 @@ function TelaInicial() {
                 </Link>
               </h2>
             </div>
-            <img src={cactoGroup} className="cactoGroup" alt="Expressão do dia" />
+
+            <img src={cactoGroup} className="cactoGroup" alt="Cacto" />
+
             <div className="significado">
               <h3>Significado</h3>
               <p>
-                Expressão informal que significa bobo, tolo ou ingênuo. Pode ser usada de forma cômica ou pejorativa, dependendo do tom e do contexto. Em algumas situações, também pode indicar alguém desastrado ou que comete erros frequentes.
+                Expressão informal que significa bobo, tolo ou ingênuo. Pode
+                ser usada de forma cômica ou pejorativa, dependendo do tom e do
+                contexto. Em algumas situações, também pode indicar alguém
+                desastrado ou que comete erros frequentes.
               </p>
             </div>
           </div>
@@ -94,11 +99,21 @@ function TelaInicial() {
                     <p className="exemplo-telaInicial">"{exp.exemplo}"</p>
                     <div className="reacoes-telaInicial">
                       <span>
-                        {exp.likes}<img src={likeIcon} className="like-telaInicial" alt="Curtir" />
+                        {exp.likes}
+                        <img
+                          src={likeIcon}
+                          className="like-telaInicial"
+                          alt="Curtir"
+                        />
                       </span>
                       <span className="divisor" />
                       <span>
-                        {exp.dislikes}<img src={dislikeIcon} className="dislike-telaInicial" alt="Não curtir" /> 
+                        {exp.dislikes}
+                        <img
+                          src={dislikeIcon}
+                          className="dislike-telaInicial"
+                          alt="Não curtir"
+                        />
                       </span>
                     </div>
                   </div>
@@ -118,11 +133,21 @@ function TelaInicial() {
                     <p className="exemplo-telaInicial">"{exp.exemplo}"</p>
                     <div className="reacoes-telaInicial">
                       <span>
-                        {exp.likes}<img src={likeIcon} alt="Curtir" className="like-telaInicial" /> 
+                        {exp.likes}
+                        <img
+                          src={likeIcon}
+                          className="like-telaInicial"
+                          alt="Curtir"
+                        />
                       </span>
                       <span className="divisor" />
                       <span>
-                        {exp.dislikes}<img src={dislikeIcon} className="dislike-telaInicial" alt="Não curtir" /> 
+                        {exp.dislikes}
+                        <img
+                          src={dislikeIcon}
+                          className="dislike-telaInicial"
+                          alt="Não curtir"
+                        />
                       </span>
                     </div>
                   </div>

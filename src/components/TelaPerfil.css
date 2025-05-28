@@ -1,33 +1,37 @@
-.chapeu-Cangaceiro{
+/* Elementos Decorativos */
+.chapeu-Cangaceiro {
   width: 10rem;
   margin-bottom: 8rem;
   z-index: 1;
   position: absolute;
   padding-top: 2rem;
 }
-.bola-amarela{
+
+.bola-amarela {
   position: relative;
   width: 15rem;
   color: #fff8d8;
   margin-bottom: 3rem;
 }
-.caveira{
+
+.caveira {
   position: absolute;
   width: 9rem;
   margin-top: 6rem;
-  
 }
 
+/* Container principal */
 .perfil-container {
   display: flex;
   margin: 5rem auto;
-  height: 60rem;
+  flex-wrap: wrap;
   border-radius: 0.8rem;
 }
 
+/* Lateral */
 .perfil-lateral {
   width: 30rem;
-  margin-left: 10rem;
+  margin-left: 5rem;
   border-radius: 1rem;
   background-color: #e6dcae;
   padding: 4rem 2rem;
@@ -36,12 +40,7 @@
   align-items: center;
 }
 
-.avatar {
-  width: 8rem;
-  height: 8rem;
-  margin-bottom: 2rem;
-}
-
+/* Inputs */
 .input-group-telaPerfil {
   width: 100%;
   margin-bottom: 3rem;
@@ -56,9 +55,7 @@
   color: #333;
 }
 
-
 .input-group-telaPerfil input {
-  
   width: 75%;
   padding: 0.6rem 0;
   border: none;
@@ -68,45 +65,44 @@
   color: #000;
   outline: none;
   margin-left: 4rem;
- 
 }
 
+/* Conteúdo principal */
 .perfil-conteudo {
   flex: 1;
   padding: 3rem;
   background-color: #fff8d8;
-  margin-right: 10rem;
+  margin-right: 5rem;
 }
 
+/* Colunas */
 .expressao-colunas {
   display: flex;
   gap: 4rem;
+  flex-wrap: wrap;
 }
+
 .coluna-telaPerfil {
-  /* flex: 1; */
-  margin-left: 9rem;
-
-}
-.titulo-TelaPerfil{
-  margin-left: -2rem;
-}
-.titulo-HistoricoCurtidas{
-  margin-left: -5rem;
-}
-.pencil{
-  margin-right: 3rem;
+  flex: 1;
+  min-width: 30rem;
 }
 
-.coluna h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #333;
+/* Títulos */
+.titulo-TelaPerfil {
+  margin-left: 0;
 }
 
+.titulo-HistoricoCurtidas {
+  margin-left: 0;
+}
+
+/* Cards de expressão */
 .expressao-card {
   padding: 1.5rem;
   margin-bottom: 2rem;
   border-radius: 0.6rem;
+  background-color: #f6e7af;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .expressao-card h3 {
@@ -124,19 +120,115 @@
   color: #555;
 }
 
+/* Interações */
 .interacoes-telaPerfil {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
 }
+
 .interacoes-telaPerfil .divisor {
   height: 1.5rem;
   width: 0.1rem;
   background-color: black;
 }
-.bookmark-telaPerfil{
+
+/* Ícones */
+.pencil {
+  margin-right: 3rem;
+}
+
+.bookmark-telaPerfil {
   width: 1.7rem;
-  margin-left: 10rem;
-  margin-top: -23rem;
+}
+
+/* 🔥 Responsividade */
+@media (max-width: 1200px) {
+  .perfil-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfil-lateral {
+    margin-left: 0;
+    width: 90%;
+  }
+
+  .perfil-conteudo {
+    margin-right: 0;
+    width: 90%;
+  }
+
+  .input-group-telaPerfil label {
+    margin-left: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .perfil-lateral {
+    width: 100%;
+    padding: 3rem 1.5rem;
+  }
+
+  .perfil-conteudo {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .input-group-telaPerfil label {
+    margin-left: 16rem;
+  }
+
+  .input-group-telaPerfil input {
+    margin-left: 3rem;
+    width: 70%;
+  }
+
+  .expressao-colunas {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chapeu-Cangaceiro {
+    width: 7rem;
+    padding-top: 1rem;
+  }
+
+  .bola-amarela {
+    width: 10rem;
+  }
+
+  .caveira {
+    width: 7rem;
+    margin-top: 4rem;
+  }
+
+  .input-group-telaPerfil label {
+    margin-left: 12rem;
+  }
+
+  .input-group-telaPerfil input {
+    margin-left: 2rem;
+    width: 65%;
+  }
+
+  .expressao-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .expressao-card p {
+    font-size: 1rem;
+  }
+
+  .expressao-card .exemplo {
+    margin: 1rem 0;
+  }
+
+  .bookmark-telaPerfil {
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
