@@ -93,3 +93,22 @@
   width: 1.6rem;
   vertical-align: middle;
 }
+
+.reacoes button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.reacoes button img {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

@@ -1,21 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './TelaDesafio.css';
 import Header from './Header';
 import Button from "./Button";
 import iguana from '../assets/iguana-desafio.png';
-import like from '../assets/like.svg';
-import dislike from '../assets/dislike.svg';
+import likeIcon from '../assets/like.svg';
+import dislikeIcon from '../assets/dislike.svg';
 import perfil from '../assets/foto-perfil.png';
 
-const usuarios = [
-  "JEanNego",
-  "KitCat",
-  "OxeMaster",
-  "Laurra",
-  "AperreadoBR",
-  "Bibi"
-]
-
+const usuarios = ["JEanNego", "KitCat", "OxeMaster", "Laurra", "AperreadoBR", "Bibi"];
 const frases = [
   "Ô tabacudo, tu não sabe nem fritar um ovo!",
   "Deixa de ser tabacudo e presta atenção, rapaz!",
@@ -24,20 +16,53 @@ const frases = [
   "Ô tabacudo, olha o que tu fez agora!",
   "Se passar mais vergonha, vai ganhar o prêmio de tabacudo do ano!",
 ];
-
-const usuariosTop3 = [
-  "LampiãoCode",
-  "TabacudoSupremo",
-  "CuscuzKing"
-]
-
+const usuariosTop3 = ["LampiãoCode", "TabacudoSupremo", "CuscuzKing"];
 const top3 = [
   "Só um tabacudo pra tropeçar no próprio pé!",
   "O tabacudo foi botar gasolina e esqueceu o carro em casa!",
   "Oxe, tu tá mais perdido que tabacudo em prova de física!",
 ];
 
+const initialReactions = [
+  { like: 12, dislike: 4 },
+  { like: 30, dislike: 3 },
+  { like: 7, dislike: 1 },
+  { like: 18, dislike: 6 },
+  { like: 25, dislike: 9 },
+  { like: 5, dislike: 2 }
+];
+
+const initialTopReactions = [
+  { like: 88, dislike: 2 },
+  { like: 65, dislike: 5 },
+  { like: 77, dislike: 3 }
+];
+
 export default function TelaDesafio() {
+  const [reactions, setReactions] = useState(initialReactions);
+  const [selected, setSelected] = useState(Array(frases.length).fill(null));
+  const [topReactions, setTopReactions] = useState(initialTopReactions);
+  const [topSelected, setTopSelected] = useState(Array(top3.length).fill(null));
+
+  const handleReaction = (index, type, isTop = false) => {
+    const updatedReactions = isTop ? [...topReactions] : [...reactions];
+    const updatedSelected = isTop ? [...topSelected] : [...selected];
+
+    if (updatedSelected[index] === type) {
+      updatedReactions[index][type] -= 1;
+      updatedSelected[index] = null;
+    } else {
+      if (updatedSelected[index] === 'like') updatedReactions[index].like -= 1;
+      if (updatedSelected[index] === 'dislike') updatedReactions[index].dislike -= 1;
+
+      updatedReactions[index][type] += 1;
+      updatedSelected[index] = type;
+    }
+
+    isTop ? (setTopReactions(updatedReactions), setTopSelected(updatedSelected)) :
+            (setReactions(updatedReactions), setSelected(updatedSelected));
+  };
+
   return (
     <div className="tela-desafio">
       <Header />
@@ -49,12 +74,8 @@ export default function TelaDesafio() {
           <ul className="regras">
             <li>É permitido o envio de apenas uma frase por desafio.</li>
             <li>É proibido o envio de propagandas e links externos.</li>
-            <li>
-              Se o usuário mandar algo que vá contra a política da plataforma, receberá uma puxada de orelha. Caso o usuário receba 3 puxadas, sua conta será arrebatada da aplicação.
-            </li>
-            <li>
-              As 3 melhores frases serão incluídas em nosso dicionário como exemplos de uso.
-            </li>
+            <li>Se o usuário mandar algo que vá contra a política da plataforma, receberá uma puxada de orelha. Caso o usuário receba 3 puxadas, sua conta será arrebatada da aplicação.</li>
+            <li>As 3 melhores frases serão incluídas em nosso dicionário como exemplos de uso.</li>
           </ul>
           <input type="text" placeholder="Digite sua frase" className="input-frase" />
         </div>
@@ -71,11 +92,15 @@ export default function TelaDesafio() {
                     <p><strong>{usuarios[i]}</strong></p>
                     <p>{frase}</p>
                     <div className="reacoes">
-                      <span>45</span>
-                      <img src={like} alt="like" />
+                      <span>{reactions[i].like}</span>
+                      <button className="icon-button" onClick={() => handleReaction(i, 'like')}>
+                        <img src={likeIcon} alt="like" style={{ filter: selected[i] === 'like' ? 'brightness(0)' : 'none' }} />
+                      </button>
                       <h3>|</h3>
-                      <span>13</span>
-                      <img src={dislike} alt="dislike" />
+                      <span>{reactions[i].dislike}</span>
+                      <button className="icon-button" onClick={() => handleReaction(i, 'dislike')}>
+                        <img src={dislikeIcon} alt="dislike" style={{ filter: selected[i] === 'dislike' ? 'brightness(0)' : 'none' }} />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -93,11 +118,15 @@ export default function TelaDesafio() {
                     <p><strong>{usuariosTop3[i]}</strong></p>
                     <p>{frase}</p>
                     <div className="reacoes">
-                      <span>45</span>
-                      <img src={like} alt="like" />
+                      <span>{topReactions[i].like}</span>
+                      <button className="icon-button" onClick={() => handleReaction(i, 'like', true)}>
+                        <img src={likeIcon} alt="like" style={{ filter: topSelected[i] === 'like' ? 'brightness(0)' : 'none' }} />
+                      </button>
                       <h3>|</h3>
-                      <span>13</span>
-                      <img src={dislike} alt="dislike" />
+                      <span>{topReactions[i].dislike}</span>
+                      <button className="icon-button" onClick={() => handleReaction(i, 'dislike', true)}>
+                        <img src={dislikeIcon} alt="dislike" style={{ filter: topSelected[i] === 'dislike' ? 'brightness(0)' : 'none' }} />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -106,7 +135,6 @@ export default function TelaDesafio() {
           </div>
         </div>
       </div>
-    
-  </div>
-);
+    </div>
+  );
 }
