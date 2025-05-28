@@ -67,7 +67,6 @@
   text-align: center;
 }
 
-/* 🔥 Responsividade */
 @media (max-width: 768px) {
   .container-sugestao {
     flex-direction: column;
