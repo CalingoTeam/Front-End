@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "^12.23.12",
+    "framer-motion": "^12.23.24",
     "project-calingo": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.1.1",
